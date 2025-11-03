@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🧮 TimetablePro
 
 A smart **automated timetable generator** built using Flask, MySQL, and TailwindCSS.  
@@ -41,3 +42,7 @@ pip install -r requirements.txt
 
 # Run the Flask app
 python app.py
+=======
+# TimetablePro
+An AI-assisted Flask web app that automatically generates conflict-free college timetables with subject, faculty, and lab management.
+>>>>>>> 8b0222a7f8d918dca8fc04007f3e03000fb25a51
