@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}About - Timetable Pro{% endblock %}
+
+{% block content %}
+<div class="pt-24 pb-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">About <span class="text-blue-600">Timetable Pro</span></h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're revolutionizing educational scheduling with intelligent automation and user-friendly design.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+      <div>
+        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h3>
+        <p class="text-gray-600 mb-6">
+          Timetable Pro was founded with a simple goal: to eliminate the tedious, time-consuming process of manual timetable creation. 
+          We believe educators should focus on teaching, not scheduling conflicts.
+        </p>
+        <p class="text-gray-600 mb-8">
+          Our platform combines advanced algorithms with an intuitive interface, making complex scheduling accessible to institutions of all sizes.
+        </p>
+        
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-bullseye text-green-600"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900">Our Vision</h4>
+              <p class="text-gray-600 text-sm">To become the global standard for educational scheduling solutions.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-heart text-blue-600"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900">Our Values</h4>
+              <p class="text-gray-600 text-sm">Innovation, reliability, and user-centric design drive everything we do.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-xl p-8 shadow-md border border-gray-100">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">Why Choose Timetable Pro?</h3>
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+            <div>
+              <h4 class="font-semibold text-gray-900">Time Saving</h4>
+              <p class="text-gray-600 text-sm">Reduce timetable creation time from weeks to minutes.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+            <div>
+              <h4 class="font-semibold text-gray-900">Error Reduction</h4>
+              <p class="text-gray-600 text-sm">Eliminate scheduling conflicts and double bookings automatically.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+            <div>
+              <h4 class="font-semibold text-gray-900">Resource Optimization</h4>
+              <p class="text-gray-600 text-sm">Maximize utilization of teachers, classrooms, and facilities.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+            <div>
+              <h4 class="font-semibold text-gray-900">Flexibility</h4>
+              <p class="text-gray-600 text-sm">Adapt to changing requirements with easy modifications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="flex items-start">
+          <i class="fas fa-check text-blue-600 mt-1 mr-3"></i>
+          <span class="text-gray-700">User authentication and project management</span>
+        </div>
+        <div class="flex items-start">
+          <i class="fas fa-check text-blue-600 mt-1 mr-3"></i>
+          <span class="text-gray-700">Support for multiple batches and years (SY, TY, BTech)</span>
+        </div>
+        <div class="flex items-start">
+          <i class="fas fa-check text-blue-600 mt-1 mr-3"></i>
+          <span class="text-gray-700">Automatic conflict detection and resolution</span>
+        </div>
+        <div class="flex items-start">
+          <i class="fas fa-check text-blue-600 mt-1 mr-3"></i>
+          <span class="text-gray-700">Export timetables to DOCX and XLSX formats</span>
+        </div>
+        <div class="flex items-start">
+          <i class="fas fa-check text-blue-600 mt-1 mr-3"></i>
+          <span class="text-gray-700">Lab and lecture session management</span>
+        </div>
+        <div class="flex items-start">
+          <i class="fas fa-check text-blue-600 mt-1 mr-3"></i>
+          <span class="text-gray-700">Break time configuration</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-md p-8">
+      <h2 class="text-2xl font-semibold mb-4">How to Use</h2>
+      <ol class="list-decimal list-inside text-gray-700 space-y-3">
+        <li class="ml-4">Sign up for a free account or login if you already have one</li>
+        <li class="ml-4">Create a new timetable project with your configuration</li>
+        <li class="ml-4">Fill in the required details: classrooms, labs, subjects, and timings</li>
+        <li class="ml-4">Generate your timetable automatically</li>
+        <li class="ml-4">View, edit, or download your timetables anytime</li>
+      </ol>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

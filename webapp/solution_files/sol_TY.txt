@@ -1,0 +1,376 @@
+-------------------------- STATISTICS --------------------------
+
+Hard constraints satisfied: 100.00 %
+Soft constraints satisfied: 100.00 %
+
+TOTAL empty space for all GROUPS and all days: 16
+MAX empty space for GROUP in day: 2
+AVERAGE empty space for GROUPS per week: 8.00
+
+TOTAL empty space for all TEACHERS and all days: 17
+MAX empty space for TEACHER in day: 4
+AVERAGE empty space for TEACHERS per week: 2.12
+
+Free term -> Monday: 11
+
+--------------------------- SCHEDULE ---------------------------
+
+Class 38
+Teacher: Teacher-Apti  
+Subject: Apti  
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Monday 12
+
+Class 19
+Teacher: Teacher-CN  
+Subject: CN  
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Wednesday 10
+
+Class 26
+Teacher: Teacher-TOC 
+Subject: TOC 
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Thursday 14
+
+Class 30
+Teacher: Teacher-Soft Engg 
+Subject: Soft Engg 
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Tuesday 12
+
+Class 31
+Teacher: Teacher-Soft Engg 
+Subject: Soft Engg 
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Monday 12
+
+Class 29
+Teacher: Teacher-TOC 
+Subject: TOC 
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-4 
+Time: Tuesday 12
+
+Class 12
+Teacher: Teacher-OS  
+Subject: OS  
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-4 
+Time: Wednesday 12
+
+Class 15
+Teacher: Teacher-OS  
+Subject: OS  
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-4 
+Time: Thursday 14
+
+Class 33
+Teacher: Teacher-Soft Engg 
+Subject: Soft Engg 
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Monday 14
+
+Class 25
+Teacher: Teacher-TOC 
+Subject: TOC 
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-4 
+Time: Tuesday 14
+
+Class 23
+Teacher: Teacher-CN  
+Subject: CN  
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-5 
+Time: Tuesday 14
+
+Class 3
+Teacher: Teacher-DBMS  
+Subject: DBMS  
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-5 
+Time: Monday 14
+
+Class 28
+Teacher: Teacher-TOC 
+Subject: TOC 
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-4 
+Time: Thursday 12
+
+Class 6
+Teacher: Teacher-DBMS  
+Subject: DBMS  
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-5 
+Time: Wednesday 12
+
+Class 24
+Teacher: Teacher-TOC 
+Subject: TOC 
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-4 
+Time: Tuesday 10
+
+Class 18
+Teacher: Teacher-CN  
+Subject: CN  
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-4 
+Time: Tuesday 9
+
+Class 39
+Teacher: Teacher-Apti  
+Subject: Apti  
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Wednesday 10
+
+Class 9
+Teacher: Lab-DBMS Lab 
+Subject: DBMS Lab 
+Groups: TY-B2 
+Type: L 
+Duration: 2 hour(s)
+Classroom: Programming Lab 
+Time: Tuesday 9 10
+
+Class 7
+Teacher: Teacher-DBMS  
+Subject: DBMS  
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Wednesday 14
+
+Class 21
+Teacher: Teacher-CN  
+Subject: CN  
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Monday 15
+
+Class 34
+Teacher: Teacher-Soft Engg 
+Subject: Soft Engg 
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-4 
+Time: Friday 9
+
+Class 20
+Teacher: Teacher-CN  
+Subject: CN  
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-5 
+Time: Thursday 12
+
+Class 5
+Teacher: Teacher-DBMS  
+Subject: DBMS  
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-4 
+Time: Wednesday 15
+
+Class 16
+Teacher: Lab-OS Lab 
+Subject: OS Lab 
+Groups: TY-B1 
+Type: L 
+Duration: 2 hour(s)
+Classroom: Programming Lab 
+Time: Wednesday 14 15
+
+Class 13
+Teacher: Teacher-OS  
+Subject: OS  
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-5 
+Time: Thursday 15
+
+Class 22
+Teacher: Teacher-CN  
+Subject: CN  
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Tuesday 15
+
+Class 35
+Teacher: Teacher-Soft Engg 
+Subject: Soft Engg 
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-5 
+Time: Wednesday 9
+
+Class 4
+Teacher: Teacher-DBMS  
+Subject: DBMS  
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-4 
+Time: Friday 10
+
+Class 8
+Teacher: Lab-DBMS Lab 
+Subject: DBMS Lab 
+Groups: TY-B1 
+Type: L 
+Duration: 2 hour(s)
+Classroom: DBMS Lab 
+Time: Monday 9 10
+
+Class 27
+Teacher: Teacher-TOC 
+Subject: TOC 
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Friday 14
+
+Class 37
+Teacher: Teacher-Apti  
+Subject: Apti  
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Thursday 10
+
+Class 14
+Teacher: Teacher-OS  
+Subject: OS  
+Groups: TY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-5 
+Time: Friday 12
+
+Class 0
+Teacher: Teacher-DBMS  
+Subject: DBMS  
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Friday 15
+
+Class 32
+Teacher: Teacher-Soft Engg 
+Subject: Soft Engg 
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-5 
+Time: Tuesday 15
+
+Class 11
+Teacher: Teacher-OS  
+Subject: OS  
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Thursday 9
+
+Class 17
+Teacher: Lab-OS Lab 
+Subject: OS Lab 
+Groups: TY-B2 
+Type: L 
+Duration: 2 hour(s)
+Classroom: AI-ML Lab 
+Time: Thursday 9 10
+
+Class 10
+Teacher: Teacher-OS  
+Subject: OS  
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-5 
+Time: Friday 10
+
+Class 2
+Teacher: Teacher-DBMS  
+Subject: DBMS  
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Friday 9
+
+Class 1
+Teacher: Teacher-DBMS  
+Subject: DBMS  
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Wednesday 9
+
+Class 36
+Teacher: Teacher-Apti  
+Subject: Apti  
+Groups: TY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Thursday 15

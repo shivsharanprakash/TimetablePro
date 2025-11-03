@@ -1,0 +1,411 @@
+-------------------------- STATISTICS --------------------------
+Hard constraints NOT satisfied, cost: 6
+Soft constraints satisfied: 100.00 %
+
+TOTAL empty space for all GROUPS and all days: 20
+MAX empty space for GROUP in day: 2
+AVERAGE empty space for GROUPS per week: 10.00
+
+TOTAL empty space for all TEACHERS and all days: 25
+MAX empty space for TEACHER in day: 4
+AVERAGE empty space for TEACHERS per week: 2.50
+
+Free term -> Monday: 11
+
+--------------------------- SCHEDULE ---------------------------
+
+Class 38
+Teacher: Lab-capstone 
+Subject: capstone 
+Groups: BTech-B1 
+Type: L 
+Duration: 2 hour(s)
+Classroom: Programming Lab 
+Time: Monday 9 10
+
+Class 39
+Teacher: Lab-capstone 
+Subject: capstone 
+Groups: BTech-B2 
+Type: L 
+Duration: 2 hour(s)
+Classroom: Programming Lab 
+Time: Monday 14 15
+
+Class 18
+Teacher: Lab-ML Lab 
+Subject: ML Lab 
+Groups: BTech-B1 
+Type: L 
+Duration: 2 hour(s)
+Classroom: AI-ML Lab 
+Time: Monday 14 15
+
+Class 19
+Teacher: Lab-ML Lab 
+Subject: ML Lab 
+Groups: BTech-B2 
+Type: L 
+Duration: 2 hour(s)
+Classroom: AI-ML Lab 
+Time: Monday 9 10
+
+Class 32
+Teacher: Lab-IOT Lab 
+Subject: IOT Lab 
+Groups: BTech-B1 
+Type: L 
+Duration: 2 hour(s)
+Classroom: Programming Lab 
+Time: Tuesday 9 10
+
+Class 33
+Teacher: Lab-IOT Lab 
+Subject: IOT Lab 
+Groups: BTech-B2 
+Type: L 
+Duration: 2 hour(s)
+Classroom: Programming Lab 
+Time: Tuesday 14 15
+
+Class 8
+Teacher: Lab-AI Lab 
+Subject: AI Lab 
+Groups: BTech-B1 
+Type: L 
+Duration: 2 hour(s)
+Classroom: Programming Lab 
+Time: Wednesday 9 10
+
+Class 9
+Teacher: Lab-AI Lab 
+Subject: AI Lab 
+Groups: BTech-B2 
+Type: L 
+Duration: 2 hour(s)
+Classroom: Programming Lab 
+Time: Wednesday 14 15
+
+Class 0
+Teacher: Teacher-AI 
+Subject: AI 
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Tuesday 14
+
+Class 1
+Teacher: Teacher-AI 
+Subject: AI 
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Wednesday 14
+
+Class 4
+Teacher: Teacher-AI 
+Subject: AI 
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Tuesday 9
+
+Class 5
+Teacher: Teacher-AI 
+Subject: AI 
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Wednesday 9
+
+Class 6
+Teacher: Teacher-AI 
+Subject: AI 
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Thursday 9
+
+Class 7
+Teacher: Teacher-AI 
+Subject: AI 
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Friday 9
+
+Class 14
+Teacher: Teacher-ML  
+Subject: ML  
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Tuesday 10
+
+Class 15
+Teacher: Teacher-ML  
+Subject: ML  
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Wednesday 10
+
+Class 16
+Teacher: Teacher-ML  
+Subject: ML  
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Thursday 10
+
+Class 17
+Teacher: Teacher-ML  
+Subject: ML  
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Friday 10
+
+Class 23
+Teacher: Teacher-BDA 
+Subject: BDA 
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Thursday 14
+
+Class 24
+Teacher: Teacher-BDA 
+Subject: BDA 
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Friday 14
+
+Class 26
+Teacher: Teacher-IOT  
+Subject: IOT  
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Monday 12
+
+Class 30
+Teacher: Teacher-IOT  
+Subject: IOT  
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Tuesday 12
+
+Class 31
+Teacher: Teacher-IOT  
+Subject: IOT  
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Wednesday 12
+
+Class 35
+Teacher: Teacher-Project work  
+Subject: Project work  
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Tuesday 12
+
+Class 36
+Teacher: Teacher-Project work  
+Subject: Project work  
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Monday 12
+
+Class 40
+Teacher: Teacher-Seminar  
+Subject: Seminar  
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Monday 15
+
+Class 41
+Teacher: Teacher-Seminar  
+Subject: Seminar  
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Tuesday 15
+
+Class 43
+Teacher: Teacher-Seminar  
+Subject: Seminar  
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Tuesday 15
+
+Class 2
+Teacher: Teacher-AI 
+Subject: AI 
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Wednesday 12
+
+Class 3
+Teacher: Teacher-AI 
+Subject: AI 
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Wednesday 15
+
+Class 10
+Teacher: Teacher-ML  
+Subject: ML  
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Thursday 9
+
+Class 11
+Teacher: Teacher-ML  
+Subject: ML  
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Thursday 12
+
+Class 12
+Teacher: Teacher-ML  
+Subject: ML  
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Thursday 15
+
+Class 13
+Teacher: Teacher-ML  
+Subject: ML  
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Friday 9
+
+Class 20
+Teacher: Teacher-BDA 
+Subject: BDA 
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Thursday 10
+
+Class 21
+Teacher: Teacher-BDA 
+Subject: BDA 
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Friday 10
+
+Class 22
+Teacher: Teacher-BDA 
+Subject: BDA 
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Friday 12
+
+Class 25
+Teacher: Teacher-BDA 
+Subject: BDA 
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Thursday 12
+
+Class 27
+Teacher: Teacher-IOT  
+Subject: IOT  
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Thursday 14
+
+Class 28
+Teacher: Teacher-IOT  
+Subject: IOT  
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Friday 14
+
+Class 29
+Teacher: Teacher-IOT  
+Subject: IOT  
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Thursday 15
+
+Class 34
+Teacher: Teacher-Project work  
+Subject: Project work  
+Groups: BTech-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Friday 15
+
+Class 37
+Teacher: Teacher-Project work  
+Subject: Project work  
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Friday 12
+
+Class 42
+Teacher: Teacher-Seminar  
+Subject: Seminar  
+Groups: BTech-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Friday 15

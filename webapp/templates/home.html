@@ -1,0 +1,346 @@
+{% extends "base.html" %}
+
+{% block title %}Timetable Pro - Smart Scheduling Solutions{% endblock %}
+
+{% block flash_margin %}mt-0{% endblock %}
+
+{% block content %}
+  <!-- Hero Section -->
+  <section id="home" class="gradient-bg pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col lg:flex-row items-center">
+        <!-- Hero Content -->
+        <div class="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            Smart Timetable Generation <span class="text-blue-200">Made Simple</span>
+          </h1>
+          <p class="text-lg text-blue-100 mb-8 max-w-2xl">
+            Automatically create optimized class schedules, manage resources efficiently, and export to multiple formats with our intelligent timetable generator.
+          </p>
+          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
+            {% if session.get('user_id') %}
+              <a href="{{ url_for('dashboard') }}" class="btn-primary text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg inline-flex items-center justify-center">
+                <i class="fas fa-tachometer-alt mr-2"></i>
+                Go to Dashboard
+              </a>
+            {% else %}
+              <a href="{{ url_for('signup') }}" class="btn-primary text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg inline-flex items-center justify-center">
+                <i class="fas fa-rocket mr-2"></i>
+                Start Creating Now
+              </a>
+            {% endif %}
+            <a href="#how-it-works" class="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg border border-white/30 inline-flex items-center justify-center hover:bg-white/30 transition-colors">
+              <i class="fas fa-play-circle mr-2"></i>
+              See How It Works
+            </a>
+          </div>
+          
+          <!-- Stats -->
+          <div class="flex flex-wrap justify-center lg:justify-start mt-12 space-x-8">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-white stats-counter" data-target="{{ total_schedules }}">0</div>
+              <div class="text-blue-200 text-sm">Schedules Generated</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-white stats-counter" data-target="1">0</div>
+              <div class="text-blue-200 text-sm">Educational Institutions</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-white stats-counter" data-target="98">0</div>
+              <div class="text-blue-200 text-sm">Satisfaction Rate</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hero Image/Illustration -->
+        <div class="lg:w-1/2 relative">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-2xl">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+              <!-- Mock timetable preview -->
+              <div class="p-4 border-b border-gray-200 flex items-center">
+                <div class="flex space-x-2">
+                  <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                </div>
+                <div class="mx-auto text-sm font-medium text-gray-600">Class Schedule Preview</div>
+              </div>
+              <div class="p-4">
+                <table class="w-full text-sm">
+                  <thead>
+                    <tr class="bg-gray-100">
+                      <th class="p-2 text-left">Time</th>
+                      <th class="p-2 text-center">Mon</th>
+                      <th class="p-2 text-center">Tue</th>
+                      <th class="p-2 text-center">Wed</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="p-2 font-medium">9:00-10:00</td>
+                      <td class="p-2 text-center bg-blue-50 text-blue-700 rounded">Math</td>
+                      <td class="p-2 text-center bg-green-50 text-green-700 rounded">Science</td>
+                      <td class="p-2 text-center bg-purple-50 text-purple-700 rounded">History</td>
+                    </tr>
+                    <tr>
+                      <td class="p-2 font-medium">10:00-11:00</td>
+                      <td class="p-2 text-center bg-yellow-50 text-yellow-700 rounded">BREAK</td>
+                      <td class="p-2 text-center bg-yellow-50 text-yellow-700 rounded">BREAK</td>
+                      <td class="p-2 text-center bg-yellow-50 text-yellow-700 rounded">BREAK</td>
+                    </tr>
+                    <tr>
+                      <td class="p-2 font-medium">11:00-12:00</td>
+                      <td class="p-2 text-center bg-green-50 text-green-700 rounded">Biology</td>
+                      <td class="p-2 text-center bg-blue-50 text-blue-700 rounded">Physics</td>
+                      <td class="p-2 text-center bg-indigo-50 text-indigo-700 rounded">Chemistry</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Floating elements -->
+          <div class="absolute -top-6 -right-6 w-24 h-24 bg-white/10 rounded-full blur-xl animate-float"></div>
+          <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float" style="animation-delay: 2s;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How <span class="text-blue-600">Timetable Pro</span> Works</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Creating the perfect schedule has never been easier with our simple four-step process.</p>
+      </div>
+      
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <!-- Steps -->
+        <div class="md:w-1/2 mb-12 md:mb-0">
+          <div class="space-y-8">
+            <!-- Step 1 -->
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">1</div>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Configure Your Requirements</h3>
+                <p class="text-gray-600">Set up your classes, teachers, rooms, and constraints using our intuitive configuration interface.</p>
+              </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg">2</div>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Generate Automatically</h3>
+                <p class="text-gray-600">Let our intelligent algorithm create optimized timetables that respect all your constraints and preferences.</p>
+              </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg">3</div>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Review & Customize</h3>
+                <p class="text-gray-600">Review the generated timetable and make any manual adjustments with our easy-to-use interface.</p>
+              </div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg">4</div>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Publish & Share</h3>
+                <p class="text-gray-600">Export your finalized timetable to multiple formats and share with teachers, students, and staff.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Visual -->
+        <div class="md:w-2/5">
+          <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-1 shadow-xl">
+            <div class="bg-white rounded-xl p-6">
+              <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i class="fas fa-calendar-check text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900">Ready to Get Started?</h3>
+                <p class="text-gray-600 mt-2">Join thousands of educational institutions using Timetable Pro</p>
+              </div>
+              {% if session.get('user_id') %}
+                <a href="{{ url_for('dashboard') }}" class="btn-primary w-full text-white py-3 rounded-lg font-semibold text-center block">
+                  Go to Dashboard
+                </a>
+              {% else %}
+                <a href="{{ url_for('signup') }}" class="btn-primary w-full text-white py-3 rounded-lg font-semibold text-center block">
+                  Create Your First Timetable
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about-preview" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About <span class="text-blue-600">Timetable Pro</span></h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're revolutionizing educational scheduling with intelligent automation and user-friendly design.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h3>
+          <p class="text-gray-600 mb-6">
+            Timetable Pro was founded with a simple goal: to eliminate the tedious, time-consuming process of manual timetable creation. 
+            We believe educators should focus on teaching, not scheduling conflicts.
+          </p>
+          <p class="text-gray-600 mb-8">
+            Our platform combines advanced algorithms with an intuitive interface, making complex scheduling accessible to institutions of all sizes.
+          </p>
+          
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                <i class="fas fa-bullseye text-green-600"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Our Vision</h4>
+                <p class="text-gray-600 text-sm">To become the global standard for educational scheduling solutions.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                <i class="fas fa-heart text-blue-600"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Our Values</h4>
+                <p class="text-gray-600 text-sm">Innovation, reliability, and user-centric design drive everything we do.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-xl p-8 shadow-md border border-gray-100">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">Why Choose Timetable Pro?</h3>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+              <div>
+                <h4 class="font-semibold text-gray-900">Time Saving</h4>
+                <p class="text-gray-600 text-sm">Reduce timetable creation time from weeks to minutes.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+              <div>
+                <h4 class="font-semibold text-gray-900">Error Reduction</h4>
+                <p class="text-gray-600 text-sm">Eliminate scheduling conflicts and double bookings automatically.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+              <div>
+                <h4 class="font-semibold text-gray-900">Resource Optimization</h4>
+                <p class="text-gray-600 text-sm">Maximize utilization of teachers, classrooms, and facilities.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+              <div>
+                <h4 class="font-semibold text-gray-900">Flexibility</h4>
+                <p class="text-gray-600 text-sm">Adapt to changing requirements with easy modifications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="gradient-bg py-16">
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Scheduling Process?</h2>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Join thousands of educational institutions saving time and reducing errors with Timetable Pro.</p>
+      <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+        {% if session.get('user_id') %}
+          <a href="{{ url_for('dashboard') }}" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg shadow-lg inline-flex items-center justify-center hover:bg-blue-50 transition-colors">
+            <i class="fas fa-tachometer-alt mr-2"></i>
+            Go to Dashboard
+          </a>
+        {% else %}
+          <a href="{{ url_for('signup') }}" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg shadow-lg inline-flex items-center justify-center hover:bg-blue-50 transition-colors">
+            <i class="fas fa-calendar-plus mr-2"></i>
+            Start Free Trial
+          </a>
+        {% endif %}
+        <a href="#how-it-works" class="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg border border-white/30 inline-flex items-center justify-center hover:bg-white/30 transition-colors">
+          <i class="fas fa-play-circle mr-2"></i>
+          Watch Demo
+        </a>
+      </div>
+      <p class="text-blue-200 mt-6">No credit card required • Free 14-day trial • Setup in minutes</p>
+    </div>
+  </section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  // Counter animation
+  function animateCounter(element, target, duration) {
+    let start = 0;
+    const increment = target / (duration / 16); // 60fps
+    
+    const updateCounter = () => {
+      start += increment;
+      if (start < target) {
+        element.textContent = Math.floor(start);
+        requestAnimationFrame(updateCounter);
+      } else {
+        element.textContent = target;
+      }
+    };
+    
+    updateCounter();
+  }
+  
+  // Initialize counters when in view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counters = document.querySelectorAll('.stats-counter');
+        counters.forEach(counter => {
+          const target = parseInt(counter.getAttribute('data-target'));
+          if (target && !counter.dataset.animated) {
+            counter.dataset.animated = 'true';
+            animateCounter(counter, target, 2000);
+          }
+        });
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  const heroSection = document.querySelector('.gradient-bg');
+  if (heroSection) {
+    observer.observe(heroSection);
+  }
+</script>
+{% endblock %}

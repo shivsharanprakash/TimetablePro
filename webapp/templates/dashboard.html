@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Timetable Pro{% endblock %}
+
+{% block content %}
+<div class="pt-24 pb-12 min-h-screen">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900 mb-2">Welcome, {{ username }}</h1>
+      <p class="text-gray-600">Manage your timetable projects</p>
+    </div>
+
+    <div class="mb-6 flex justify-end">
+      <a href="{{ url_for('configure') }}" class="btn-primary inline-flex items-center px-6 py-3 text-white rounded-lg font-medium shadow-lg">
+        <i class="fas fa-plus mr-2"></i>
+        New Project
+      </a>
+    </div>
+
+    <h2 class="text-xl font-semibold text-gray-900 mb-6">Your Timetable Projects</h2>
+    
+    {% if projects %}
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for project in projects %}
+          <div class="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow p-6">
+            <div class="flex items-start justify-between mb-4">
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ project.project_name }}</h3>
+                <p class="text-sm text-gray-500">
+                  <i class="fas fa-clock mr-1"></i>
+                  Updated: {{ project.updated_at.strftime('%Y-%m-%d %H:%M') if project.updated_at else 'N/A' }}
+                </p>
+              </div>
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                <i class="fas fa-calendar-alt text-blue-600"></i>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mt-4">
+              <a href="{{ url_for('view_project', project_id=project.id) }}" class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded-md text-sm font-medium hover:bg-blue-700 transition-colors">
+                <i class="fas fa-eye mr-1"></i>
+                View
+              </a>
+              <a href="{{ url_for('configure', project_id=project.id) }}" class="inline-flex items-center px-3 py-2 bg-yellow-600 text-white rounded-md text-sm font-medium hover:bg-yellow-700 transition-colors">
+                <i class="fas fa-edit mr-1"></i>
+                Edit
+              </a>
+              <form method="post" action="{{ url_for('delete_project', project_id=project.id) }}" class="inline">
+                <button type="submit" onclick="return confirm('Are you sure you want to delete this project?')" class="inline-flex items-center px-3 py-2 bg-red-600 text-white rounded-md text-sm font-medium hover:bg-red-700 transition-colors">
+                  <i class="fas fa-trash mr-1"></i>
+                  Delete
+                </button>
+              </form>
+              <a href="{{ url_for('download_all', project_id=project.id) }}" class="inline-flex items-center px-3 py-2 bg-green-600 text-white rounded-md text-sm font-medium hover:bg-green-700 transition-colors">
+                <i class="fas fa-download mr-1"></i>
+                Download
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="bg-white rounded-lg shadow-md border border-gray-200 p-12 text-center">
+        <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-calendar-plus text-gray-400 text-3xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">No Projects Yet</h3>
+        <p class="text-gray-600 mb-6">Create your first timetable project to get started!</p>
+        <a href="{{ url_for('configure') }}" class="btn-primary inline-flex items-center px-6 py-3 text-white rounded-lg font-medium shadow-lg">
+          <i class="fas fa-plus mr-2"></i>
+          Create New Project
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

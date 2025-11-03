@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Timetable Pro{% endblock %}
+
+{% block content %}
+<div class="min-h-screen flex items-center justify-center pt-24 pb-12">
+  <div class="max-w-md w-full bg-white rounded-lg shadow-md p-8">
+    <h2 class="text-2xl font-semibold mb-6 text-center">Login</h2>
+    <form method="post" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Username</label>
+        <input name="username" required class="mt-1 w-full border rounded px-3 py-2" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Password</label>
+        <input name="password" type="password" required class="mt-1 w-full border rounded px-3 py-2" />
+      </div>
+      <button type="submit" class="btn-primary w-full text-white py-2 rounded-lg font-medium">Login</button>
+    </form>
+    <div class="mt-4 text-center">
+      <a href="{{ url_for('signup') }}" class="text-blue-600 hover:text-blue-800">Don't have an account? Sign up</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+

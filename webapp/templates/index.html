@@ -1,0 +1,226 @@
+{% extends "base.html" %}
+
+{% block title %}Configure Timetable - Timetable Pro{% endblock %}
+
+{% block extra_js %}
+<script>
+  function subjectBlock(prefix) {
+    return `
+    <div class="border rounded p-4 mb-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm text-gray-700">Subject name</label>
+          <input name="${prefix}_subject_name" class="mt-1 w-full border rounded px-3 py-2" />
+        </div>
+        <div>
+          <label class="block text-sm text-gray-700">Hours required / week</label>
+          <input name="${prefix}_subject_hours" type="number" value="0" class="mt-1 w-32 border rounded px-3 py-2" />
+        </div>
+        <div>
+          <label class="block text-sm text-gray-700">Num of labs / subject</label>
+          <input name="${prefix}_labs_count" type="number" value="0" class="mt-1 w-32 border rounded px-3 py-2" />
+        </div>
+        <div>
+          <label class="block text-sm text-gray-700">Name of lab subject</label>
+          <input name="${prefix}_lab_name" class="mt-1 w-full border rounded px-3 py-2" />
+        </div>
+        <div>
+          <label class="block text-sm text-gray-700">Hours required (lab)</label>
+          <input name="${prefix}_lab_hours" type="number" value="0" class="mt-1 w-32 border rounded px-3 py-2" />
+        </div>
+      </div>
+    </div>`;
+  }
+
+  function addSubject(prefix, subjectData = null) {
+    const c = document.getElementById(prefix + '-subjects');
+    const html = subjectBlock(prefix);
+    const temp = document.createElement('div');
+    temp.innerHTML = html;
+    const block = temp.firstElementChild;
+    if (subjectData) {
+      const inputs = block.querySelectorAll('input, select');
+      if (subjectData.name) block.querySelector(`input[name="${prefix}_subject_name"]`).value = subjectData.name;
+      if (subjectData.hours !== undefined) block.querySelector(`input[name="${prefix}_subject_hours"]`).value = subjectData.hours;
+      if (subjectData.labs !== undefined) block.querySelector(`input[name="${prefix}_labs_count"]`).value = subjectData.labs;
+      if (subjectData.lab_name) block.querySelector(`input[name="${prefix}_lab_name"]`).value = subjectData.lab_name;
+      if (subjectData.lab_hours !== undefined) block.querySelector(`input[name="${prefix}_lab_hours"]`).value = subjectData.lab_hours;
+    }
+    c.appendChild(block);
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const configElement = document.getElementById('project-config');
+    if (configElement) {
+      // Load existing subjects if editing
+      const config = JSON.parse(configElement.textContent);
+      ['sy','ty','btech'].forEach(prefix => {
+        const yearKey = prefix === 'sy' ? 'SY' : (prefix === 'ty' ? 'TY' : 'BTech');
+        const subjects = config[yearKey]?.subjects || [];
+        subjects.forEach(subj => addSubject(prefix, subj));
+      });
+    } else {
+      ['sy','ty','btech'].forEach(p => addSubject(p));
+    }
+  });
+</script>
+{% if project_config %}
+<script id="project-config" type="application/json">{{ project_config | tojson }}</script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="pt-24 pb-12 min-h-screen">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-6">
+      <h2 class="text-3xl font-bold text-gray-900">Configure Timetable Inputs</h2>
+      <p class="text-gray-600 mt-2">Create or edit your timetable configuration</p>
+    </div>
+
+    <form method="post" action="{{ url_for('generate') }}" class="space-y-6">
+      {% if project_id %}
+        <input type="hidden" name="project_id" value="{{ project_id }}" />
+      {% endif %}
+      
+      <div class="border border-gray-200 rounded-lg p-6 bg-white shadow-md">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700 mb-2">Project Name *</label>
+          <input name="project_name" required value="{% if project_config %}{{ project_config.get('project_name', '') }}{% endif %}" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="e.g., CSE-2026-Sem1" />
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Configuration Name</label>
+            <input name="config_name" value="{% if project_config %}{{ project_config.get('config_name', '') }}{% endif %}" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Enter the department name</label>
+            <input name="department" value="{% if project_config %}{{ project_config.get('department', '') }}{% endif %}" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Number of classrooms</label>
+            <input name="num_classrooms" type="number" value="{% if project_config %}{{ project_config.get('num_classrooms', '5') }}{% else %}5{% endif %}" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Number of labs</label>
+            <input name="num_labs" type="number" value="{% if project_config %}{{ project_config.get('num_labs', '3') }}{% else %}3{% endif %}" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+          <div class="md:col-span-2">
+            <label class="block text-sm font-medium text-gray-700 mb-2">Lab names (comma-separated, optional)</label>
+            <input name="lab_names" value="{% if project_config %}{{ ','.join(project_config.get('lab_names', [])) }}{% endif %}" placeholder="Lab-1, Lab-2, ..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+        </div>
+      </div>
+
+      <div class="border border-blue-200 rounded-lg p-6 bg-blue-50 shadow-md">
+        <div class="text-lg font-semibold mb-4 text-blue-900 flex items-center">
+          <i class="fas fa-users mr-2"></i>
+          Batch Configuration
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">SY Batches</label>
+            <input name="sy_batches" type="number" value="{% if project_config %}{{ project_config.get('batches', {}).get('SY', '1') }}{% else %}1{% endif %}" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">TY Batches</label>
+            <input name="ty_batches" type="number" value="{% if project_config %}{{ project_config.get('batches', {}).get('TY', '1') }}{% else %}1{% endif %}" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">BTech Batches</label>
+            <input name="btech_batches" type="number" value="{% if project_config %}{{ project_config.get('batches', {}).get('BTech', '1') }}{% else %}1{% endif %}" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+        </div>
+      </div>
+
+      <div class="border border-blue-200 rounded-lg p-6 bg-blue-50 shadow-md">
+        <div class="text-lg font-semibold mb-4 text-blue-900 flex items-center">
+          <i class="fas fa-clock mr-2"></i>
+          College Timing Configuration
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">College Start Time</label>
+            <input name="start_time" value="{% if project_config %}{{ project_config.get('timings', {}).get('start', '09:15') }}{% else %}09:15{% endif %}" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">College End Time</label>
+            <input name="end_time" value="{% if project_config %}{{ project_config.get('timings', {}).get('end', '16:15') }}{% else %}16:15{% endif %}" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Short Break Duration (minutes)</label>
+            <input name="short_break" type="number" value="{% if project_config %}{{ project_config.get('timings', {}).get('short_break_min', '15') }}{% else %}15{% endif %}" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Lunch Break Duration (minutes)</label>
+            <input name="lunch_break" type="number" value="{% if project_config %}{{ project_config.get('timings', {}).get('lunch_break_min', '45') }}{% else %}45{% endif %}" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="border border-gray-200 rounded-lg p-6 bg-white shadow-md">
+          <div class="text-lg font-semibold mb-4 text-gray-900 flex items-center">
+            <i class="fas fa-graduation-cap mr-2 text-blue-600"></i>
+            SY
+          </div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Semester</label>
+          <select name="sy_semester" class="w-full border rounded-lg px-4 py-2 mb-4 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <option value="odd" {% if project_config and project_config.get('SY', {}).get('semester') == 'odd' %}selected{% endif %}>Odd</option>
+            <option value="even" {% if project_config and project_config.get('SY', {}).get('semester') == 'even' %}selected{% endif %}>Even</option>
+          </select>
+          <div id="sy-subjects" class="mt-3"></div>
+          <button type="button" class="mt-2 w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors" onclick="addSubject('sy')">
+            <i class="fas fa-plus mr-2"></i>
+            Add Subject
+          </button>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-6 bg-white shadow-md">
+          <div class="text-lg font-semibold mb-4 text-gray-900 flex items-center">
+            <i class="fas fa-graduation-cap mr-2 text-green-600"></i>
+            TY
+          </div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Semester</label>
+          <select name="ty_semeseter" class="w-full border rounded-lg px-4 py-2 mb-4 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <option value="odd" {% if project_config and project_config.get('TY', {}).get('semester') == 'odd' %}selected{% endif %}>Odd</option>
+            <option value="even" {% if project_config and project_config.get('TY', {}).get('semester') == 'even' %}selected{% endif %}>Even</option>
+          </select>
+          <div id="ty-subjects" class="mt-3"></div>
+          <button type="button" class="mt-2 w-full inline-flex items-center justify-center px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors" onclick="addSubject('ty')">
+            <i class="fas fa-plus mr-2"></i>
+            Add Subject
+          </button>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-6 bg-white shadow-md">
+          <div class="text-lg font-semibold mb-4 text-gray-900 flex items-center">
+            <i class="fas fa-graduation-cap mr-2 text-purple-600"></i>
+            BTech
+          </div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Semester</label>
+          <select name="btech_semester" class="w-full border rounded-lg px-4 py-2 mb-4 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <option value="odd" {% if project_config and project_config.get('BTech', {}).get('semester') == 'odd' %}selected{% endif %}>Odd</option>
+            <option value="even" {% if not project_config or project_config.get('BTech', {}).get('semester') == 'even' %}selected{% endif %}>Even</option>
+          </select>
+          <div id="btech-subjects" class="mt-3"></div>
+          <button type="button" class="mt-2 w-full inline-flex items-center justify-center px-4 py-2 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors" onclick="addSubject('btech')">
+            <i class="fas fa-plus mr-2"></i>
+            Add Subject
+          </button>
+        </div>
+      </div>
+
+      <div class="flex justify-end space-x-4">
+        <a href="{{ url_for('dashboard') }}" class="inline-flex items-center px-6 py-3 bg-gray-600 text-white rounded-lg font-medium hover:bg-gray-700 transition-colors">
+          <i class="fas fa-times mr-2"></i>
+          Cancel
+        </a>
+        <button type="submit" class="btn-primary inline-flex items-center px-8 py-3 text-white rounded-lg font-semibold shadow-lg">
+          <i class="fas fa-magic mr-2"></i>
+          Generate Timetable
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

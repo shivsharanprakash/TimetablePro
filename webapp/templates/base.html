@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Timetable Pro - Smart Scheduling Solutions{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    :root {
+      --primary: #3b82f6;
+      --primary-dark: #1d4ed8;
+      --secondary: #764ba2;
+      --accent: #10b981;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+    }
+    
+    .btn-secondary {
+      background: linear-gradient(135deg, var(--secondary) 0%, #5a3796 100%);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(118, 75, 162, 0.4);
+    }
+    
+    .nav-scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-card {
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-left-color: var(--primary);
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .stats-counter {
+      transition: all 0.5s ease;
+    }
+  </style>
+  {% block extra_css %}{% endblock %}
+</head>
+<body class="bg-white">
+  <!-- Navigation Bar -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 gradient-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="{{ url_for('home') }}" class="flex items-center">
+            <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-md mr-3">
+              <i class="fas fa-calendar-alt text-purple-600 text-xl"></i>
+            </div>
+            <span class="text-xl font-bold text-white">Timetable<span class="text-blue-300">Pro</span></span>
+          </a>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="{{ url_for('home') }}" class="text-white font-medium hover:text-blue-200 transition-colors">Home</a>
+          <a href="{{ url_for('home') }}#how-it-works" class="text-white font-medium hover:text-blue-200 transition-colors">How It Works</a>
+          <a href="{{ url_for('about') }}" class="text-white font-medium hover:text-blue-200 transition-colors">About</a>
+          
+          <!-- Conditional buttons based on authentication -->
+          {% if session.get('user_id') %}
+            <a href="{{ url_for('dashboard') }}" class="text-white font-medium hover:text-blue-200 transition-colors">Dashboard</a>
+            <a href="{{ url_for('configure') }}" class="text-white font-medium hover:text-blue-200 transition-colors">Timetable Config</a>
+            <span class="text-white/80 text-sm">Welcome, {{ session.get('username') }}</span>
+            <a href="{{ url_for('logout') }}" class="text-white font-medium hover:text-blue-200 transition-colors">Logout</a>
+          {% else %}
+            <a href="{{ url_for('login') }}" class="text-white font-medium hover:text-blue-200 transition-colors">Sign In</a>
+            <a href="{{ url_for('signup') }}" class="btn-primary text-white px-5 py-2.5 rounded-lg font-medium shadow-lg">
+              Get Started
+            </a>
+          {% endif %}
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-white text-xl">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg">
+        <div class="flex flex-col space-y-4 px-4">
+          <a href="{{ url_for('home') }}" class="text-gray-700 font-medium hover:text-blue-600 transition-colors">Home</a>
+          <a href="{{ url_for('home') }}#how-it-works" class="text-gray-700 font-medium hover:text-blue-600 transition-colors">How It Works</a>
+          <a href="{{ url_for('about') }}" class="text-gray-700 font-medium hover:text-blue-600 transition-colors">About</a>
+          
+          {% if session.get('user_id') %}
+            <a href="{{ url_for('dashboard') }}" class="text-gray-700 font-medium hover:text-blue-600 transition-colors">Dashboard</a>
+            <a href="{{ url_for('configure') }}" class="text-gray-700 font-medium hover:text-blue-600 transition-colors">Timetable Config</a>
+            <span class="text-gray-600 text-sm py-2">Welcome, {{ session.get('username') }}</span>
+            <a href="{{ url_for('logout') }}" class="text-gray-700 font-medium hover:text-blue-600 transition-colors">Logout</a>
+          {% else %}
+            <a href="{{ url_for('login') }}" class="text-gray-700 font-medium hover:text-blue-600 transition-colors">Sign In</a>
+            <a href="{{ url_for('signup') }}" class="btn-primary block text-center text-white py-2.5 rounded-lg font-medium">Get Started</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Flash messages -->
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 {% block flash_margin %}mt-4{% endblock %}">
+        {% for message in messages %}
+          <div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded mb-2">
+            {{ message }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <!-- Page content -->
+  {% block content %}{% endblock %}
+
+  <!-- Footer -->
+  {% block footer %}
+  <footer class="bg-gray-900 text-white pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <!-- Company Info -->
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center mr-3">
+              <i class="fas fa-calendar-alt text-white text-xl"></i>
+            </div>
+            <span class="text-xl font-bold">Timetable<span class="text-blue-400">Pro</span></span>
+          </div>
+          <p class="text-gray-400 mb-4">Smart scheduling solutions for educational institutions of all sizes.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-twitter text-lg"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin text-lg"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Product Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Product</h3>
+          <ul class="space-y-2">
+            <li><a href="{{ url_for('home') }}#how-it-works" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+            <li><a href="{{ url_for('about') }}" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Resources</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center text-gray-400">
+              <i class="fas fa-envelope mr-2"></i>
+              support@timetablepro.com
+            </li>
+            <li class="flex items-center text-gray-400">
+              <i class="fas fa-phone mr-2"></i>
+              +1 (555) 123-4567
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2024 Timetable Pro. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  {% endblock %}
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (navbar) {
+        if (window.scrollY > 50) {
+          navbar.classList.add('nav-scrolled');
+          navbar.classList.remove('py-4');
+          navbar.classList.add('py-3');
+        } else {
+          navbar.classList.remove('nav-scrolled');
+          navbar.classList.remove('py-3');
+          navbar.classList.add('py-4');
+        }
+      }
+    });
+  </script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

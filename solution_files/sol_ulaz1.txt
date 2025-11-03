@@ -1,0 +1,637 @@
+-------------------------- STATISTICS --------------------------
+
+Hard constraints satisfied: 100.00 %
+Soft constraints satisfied: 51.58 %
+
+TOTAL empty space for all GROUPS and all days: 52
+MAX empty space for GROUP in day: 5
+AVERAGE empty space for GROUPS per week: 2.17
+
+TOTAL empty space for all TEACHERS and all days: 13
+MAX empty space for TEACHER in day: 5
+AVERAGE empty space for TEACHERS per week: 0.34
+
+Free term -> Tuesday: 20
+
+--------------------------- SCHEDULE ---------------------------
+
+Class 29
+Teacher: Vasiljevic Jelena 
+Subject: Genetski algoritmi 
+Groups: 302, 303, 305, 306, 309, 309a 
+Type: P 
+Duration: 2 hour(s)
+Classroom: U1 
+Time: Wednesday 14 15
+
+Class 30
+Teacher: Milosavljevic Milos 
+Subject: Microsoft tehnologije za pristup podacima 
+Groups: 3s2 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U7 
+Time: Monday 12 13 14
+
+Class 15
+Teacher: Vujosevic Dusan 
+Subject: Programski prevodioci 
+Groups: 301, 302, 303, 304, 305, 306, 307, 308, 309, 309a 
+Type: P 
+Duration: 2 hour(s)
+Classroom: U8 
+Time: Tuesday 14 15
+
+Class 13
+Teacher: Milosavljevic Milos 
+Subject: Microsoft tehnologije za pristup podacima 
+Groups: 3s2 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U7 
+Time: Tuesday 15 16 17
+
+Class 22
+Teacher: Vukotic Selena 
+Subject: Kompresija podataka 
+Groups: 314, 319, 322, 313, 323, 324 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U7 
+Time: Monday 15 16
+
+Class 58
+Teacher: Jovanovic Miljana 
+Subject: Kodovanje i teorija informacija 
+Groups: 314, 319, 322, 313, 323, 324 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U7 
+Time: Monday 17 18
+
+Class 24
+Teacher: Stankovic Ivana 
+Subject: Programski prevodioci 
+Groups: 306, 307, 309, 309a 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U3 
+Time: Monday 11 12
+
+Class 20
+Teacher: Markovic Nemanja 
+Subject: Razvoj web aplikacija i servisa 
+Groups: 3s2 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U3 
+Time: Tuesday 9 10 11
+
+Class 32
+Teacher: Milojkovic Branislav 
+Subject: Konkurentni i distribuirani sistemi 
+Groups: 402 
+Type: V 
+Duration: 3 hour(s)
+Classroom: U7 
+Time: Friday 14 15 16
+
+Class 12
+Teacher: Stankovic Ivana 
+Subject: Programski prevodioci 
+Groups: 302, 303, 304 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U5 
+Time: Monday 15 16
+
+Class 11
+Teacher: Babic Djorde 
+Subject: Bezbednost mreza 
+Groups: 314, 319, 322, 313, 323, 324 
+Type: P 
+Duration: 2 hour(s)
+Classroom: U7 
+Time: Monday 19 20
+
+Class 59
+Teacher: Radosavljevic Nemanja 
+Subject: Interakcija covek racunar 
+Groups: 308, 309, 309a 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U5 
+Time: Tuesday 18 19
+
+Class 50
+Teacher: Ilic Nemanja 
+Subject: Masinsko ucenje 
+Groups: 301, 302, 306, 308 
+Type: P 
+Duration: 2 hour(s)
+Classroom: U1 
+Time: Tuesday 11 12
+
+Class 51
+Teacher: Kojadinovic Dragoljub 
+Subject: Razvoj mobilnih aplikacija 
+Groups: 303, 304, 305, 306, 307, 308, 314, 313 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U4 
+Time: Friday 12 13
+
+Class 39
+Teacher: Bojovic Petar 
+Subject: Prakticne tehnike zastite u IP mrezama 
+Groups: 3s1 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U4 
+Time: Monday 18 19 20
+
+Class 67
+Teacher: Vucic Desimir 
+Subject: Kodovanje i teorija informacija 
+Groups: 314, 319, 322, 313, 323, 324 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U8 
+Time: Thursday 11 12 13
+
+Class 18
+Teacher: Jankovic Radomir 
+Subject: Modelovanje i simulacija 
+Groups: 305, 309a, 319, 323, 324 
+Type: P 
+Duration: 2 hour(s)
+Classroom: U8 
+Time: Tuesday 12 13
+
+Class 33
+Teacher: Jovanovic Miljana 
+Subject: Digitalna obrada signala 
+Groups: 405 
+Type: V 
+Duration: 3 hour(s)
+Classroom: U4 
+Time: Monday 9 10 11
+
+Class 31
+Teacher: Martic Goran 
+Subject: Data centar infrastruktura 
+Groups: 322, 324 
+Type: P 
+Duration: 2 hour(s)
+Classroom: U4 
+Time: Thursday 16 17
+
+Class 21
+Teacher: Zirojevic Nemanja 
+Subject: Razvoj mobilnih aplikacija 
+Groups: 303, 304, 305, 306, 307, 308, 314, 313 
+Type: P 
+Duration: 2 hour(s)
+Classroom: U1 
+Time: Friday 14 15
+
+Class 52
+Teacher: Radosavljevic Nemanja 
+Subject: Interakcija covek racunar 
+Groups: 302, 306, 307 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U3 
+Time: Thursday 19 20
+
+Class 55
+Teacher: Lale Sinisa 
+Subject: Implementiranje Microsoft ISA servera 
+Groups: 3s1 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U5 
+Time: Monday 12 13 14
+
+Class 10
+Teacher: Martic Goran 
+Subject: Data centar infrastruktura 
+Groups: 322, 324 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U5 
+Time: Friday 11 12
+
+Class 42
+Teacher: Radosavljevic Nemanja 
+Subject: Interakcija covek racunar 
+Groups: 301, 303, 304, 305 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U5 
+Time: Thursday 13 14
+
+Class 27
+Teacher: Jovanovic Jelena 
+Subject: Teorija algoritama, automata i jezika 
+Groups: 401, 402 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U8 
+Time: Thursday 15 16 17
+
+Class 8
+Teacher: Djuric Milan 
+Subject: Racunarska animacija 
+Groups: 3d1 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U8 
+Time: Tuesday 9 10 11
+
+Class 0
+Teacher: Vukotic Selena 
+Subject: Kompresija podataka 
+Groups: 314, 319, 322, 313, 323, 324 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U5 
+Time: Wednesday 18 19 20
+
+Class 16
+Teacher: Tomic Milan 
+Subject: Teorija algoritama, automata i jezika 
+Groups: 401, 402 
+Type: V 
+Duration: 3 hour(s)
+Classroom: U1 
+Time: Friday 17 18 19
+
+Class 57
+Teacher: Ciganovic Igor 
+Subject: Funkcionalno programiranje 
+Groups: 302, 304, 309 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U7 
+Time: Friday 9 10
+
+Class 44
+Teacher: Malesevic Nenad 
+Subject: Graficki dizajn 2 
+Groups: 3d1 
+Type: V 
+Duration: 3 hour(s)
+Classroom: Atelje 
+Time: Monday 15 16 17
+
+Class 3
+Teacher: Djuric Milan 
+Subject: Racunarska animacija 
+Groups: 3d1 
+Type: V 
+Duration: 3 hour(s)
+Classroom: U8 
+Time: Monday 18 19 20
+
+Class 19
+Teacher: Stetin Darko 
+Subject: Scenario i knjiga snimanja 
+Groups: 3d1 
+Type: P 
+Duration: 3 hour(s)
+Classroom: Atelje 
+Time: Tuesday 15 16 17
+
+Class 60
+Teacher: Miletic Misa 
+Subject: Razvoj infrastrukture i servisa u oblaku 
+Groups: 3s2 
+Type: V 
+Duration: 3 hour(s)
+Classroom: U5 
+Time: Tuesday 12 13 14
+
+Class 49
+Teacher: Zahorjanski Miroljub 
+Subject: Istorija racunarstva 
+Groups: 3s1, 3s2 
+Type: P 
+Duration: 2 hour(s)
+Classroom: U8 
+Time: Friday 12 13
+
+Class 41
+Teacher: Dimic Surla Bojana 
+Subject: Funkcionalno programiranje 
+Groups: 302, 304, 309 
+Type: P 
+Duration: 2 hour(s)
+Classroom: U4 
+Time: Thursday 11 12
+
+Class 61
+Teacher: Ognjanovic Ivana 
+Subject: Muzicka produkcija 3 
+Groups: 3d1 
+Type: P 
+Duration: 3 hour(s)
+Classroom: Studio 
+Time: Thursday 18 19 20
+
+Class 6
+Teacher: Vidakovic MIlan 
+Subject: WEB programiranje 
+Groups: 301, 303, 304, 307, 308, 309, 314, 319, 322 
+Type: P 
+Duration: 2 hour(s)
+Classroom: U8 
+Time: Friday 16 17
+
+Class 1
+Teacher: Babic Djorde 
+Subject: Digitalna obrada signala 
+Groups: 405 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U7 
+Time: Friday 11 12 13
+
+Class 54
+Teacher: Jankovski Ivan 
+Subject: Prakticne tehnike zastite u IP mrezama 
+Groups: 3s1 
+Type: V 
+Duration: 3 hour(s)
+Classroom: U7 
+Time: Thursday 12 13 14
+
+Class 40
+Teacher: Jovanovic Miljana 
+Subject: Uvod u robotiku 
+Groups: 313, 323 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U5 
+Time: Friday 9 10
+
+Class 65
+Teacher: Lale Sinisa 
+Subject: Implementiranje Microsoft ISA servera 
+Groups: 3s1 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U5 
+Time: Tuesday 15 16 17
+
+Class 37
+Teacher: Ognjanovic Ivana 
+Subject: Muzicka produkcija 3 
+Groups: 3d1 
+Type: V 
+Duration: 3 hour(s)
+Classroom: Studio 
+Time: Friday 14 15 16
+
+Class 26
+Teacher: Jovanovic Nikola 
+Subject: Masinsko ucenje 
+Groups: 301, 302, 306, 308 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U8 
+Time: Tuesday 16 17
+
+Class 48
+Teacher: Perisic Branko 
+Subject: Softversko inzenjerstvo 
+Groups: 401, 402 
+Type: P 
+Duration: 4 hour(s)
+Classroom: U1 
+Time: Friday 9 10 11 12
+
+Class 34
+Teacher: Jankovic Radomir 
+Subject: Modelovanje i simulacija 
+Groups: 305, 309a, 324 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U3 
+Time: Thursday 9 10
+
+Class 4
+Teacher: Tomic Milan 
+Subject: Genetski algoritmi 
+Groups: 305, 306, 309, 309a 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U5 
+Time: Tuesday 9 10
+
+Class 7
+Teacher: Milojkovic Branislav 
+Subject: Konkurentni i distribuirani sistemi 
+Groups: 405 
+Type: V 
+Duration: 3 hour(s)
+Classroom: U4 
+Time: Tuesday 11 12 13
+
+Class 45
+Teacher: Miletic Misa 
+Subject: Razvoj infrastrukture i servisa u oblaku 
+Groups: 3s2 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U4 
+Time: Wednesday 15 16 17
+
+Class 63
+Teacher: Markovic Ana 
+Subject: Softversko inzenjerstvo 
+Groups: 401 
+Type: V 
+Duration: 4 hour(s)
+Classroom: U3 
+Time: Friday 13 14 15 16
+
+Class 47
+Teacher: Gavrilovic Vuk 
+Subject: WEB programiranje 
+Groups: 301, 303, 304, 307, 322 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U3 
+Time: Friday 18 19
+
+Class 46
+Teacher: Stetin Darko 
+Subject: Scenario i knjiga snimanja 
+Groups: 3d1 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U1 
+Time: Thursday 12 13
+
+Class 53
+Teacher: Vujosevic Dusan 
+Subject: Interakcija covek racunar 
+Groups: 301, 302, 303, 304, 305, 306, 307, 308, 309, 309a, 2s1, 2s2 
+Type: P 
+Duration: 2 hour(s)
+Classroom: Kolarac 
+Time: Wednesday 16 17
+
+Class 35
+Teacher: Jovanovic Milos 
+Subject: Namenski racunarski sistemi 
+Groups: 405 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U4 
+Time: Friday 14 15 16
+
+Class 36
+Teacher: Tomic Milan 
+Subject: Genetski algoritmi 
+Groups: 302, 303 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U7 
+Time: Thursday 17 18
+
+Class 17
+Teacher: Lale Sinisa 
+Subject: Upravljanje i odrzavanje Windows Server okruzenja 
+Groups: 3s1 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U4 
+Time: Monday 15 16 17
+
+Class 68
+Teacher: Gavrilovic Vuk 
+Subject: WEB programiranje 
+Groups: 308, 309, 314, 319 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U5 
+Time: Thursday 9 10
+
+Class 62
+Teacher: Jankovic Radomir 
+Subject: Modelovanje i simulacija 
+Groups: 319, 323 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U3 
+Time: Tuesday 16 17
+
+Class 43
+Teacher: Dimic Surla Bojana 
+Subject: Softverske komponente 
+Groups: 301, 307, 309a 
+Type: P 
+Duration: 2 hour(s)
+Classroom: U1 
+Time: Wednesday 12 13
+
+Class 5
+Teacher: Bojovic Petar 
+Subject: Bezbednost mreza 
+Groups: 314, 319, 322, 313, 323, 324 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U3 
+Time: Thursday 14 15
+
+Class 25
+Teacher: Milinkovic Stevan 
+Subject: Konkurentni i distribuirani sistemi 
+Groups: 401, 402, 405 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U8 
+Time: Monday 12 13 14
+
+Class 14
+Teacher: Radovic Mihailo 
+Subject: Softverske komponente 
+Groups: 301, 307, 309a 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U3 
+Time: Wednesday 18 19
+
+Class 64
+Teacher: Markovic Nemanja 
+Subject: Razvoj web aplikacija i servisa 
+Groups: 3s2 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U4 
+Time: Thursday 13 14 15
+
+Class 56
+Teacher: Lale Sinisa 
+Subject: Upravljanje i odrzavanje Windows Server okruzenja 
+Groups: 3s1 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U4 
+Time: Thursday 18 19 20
+
+Class 9
+Teacher: Malesevic Nenad 
+Subject: Graficki dizajn 2 
+Groups: 3d1 
+Type: P 
+Duration: 3 hour(s)
+Classroom: U8 
+Time: Friday 18 19 20
+
+Class 28
+Teacher: Stambolovic Bogdana 
+Subject: Namenski racunarski sistemi 
+Groups: 405 
+Type: V 
+Duration: 3 hour(s)
+Classroom: U4 
+Time: Friday 18 19 20
+
+Class 2
+Teacher: Stankovic Ivana 
+Subject: Programski prevodioci 
+Groups: 301, 305, 308 
+Type: V 
+Duration: 2 hour(s)
+Classroom: U3 
+Time: Monday 9 10
+
+Class 66
+Teacher: Jovanovic Milos 
+Subject: Uvod u robotiku 
+Groups: 313, 323 
+Type: P 
+Duration: 2 hour(s)
+Classroom: U1 
+Time: Thursday 9 10
+
+Class 23
+Teacher: Milojkovic Branislav 
+Subject: Konkurentni i distribuirani sistemi 
+Groups: 401 
+Type: V 
+Duration: 3 hour(s)
+Classroom: U5 
+Time: Thursday 18 19 20
+
+Class 38
+Teacher: Markovic Ana 
+Subject: Softversko inzenjerstvo 
+Groups: 402 
+Type: V 
+Duration: 4 hour(s)
+Classroom: U4 
+Time: Tuesday 16 17 18 19

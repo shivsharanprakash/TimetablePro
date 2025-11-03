@@ -1,0 +1,394 @@
+-------------------------- STATISTICS --------------------------
+
+Hard constraints satisfied: 100.00 %
+Soft constraints satisfied: 100.00 %
+
+TOTAL empty space for all GROUPS and all days: 16
+MAX empty space for GROUP in day: 2
+AVERAGE empty space for GROUPS per week: 8.00
+
+TOTAL empty space for all TEACHERS and all days: 22
+MAX empty space for TEACHER in day: 4
+AVERAGE empty space for TEACHERS per week: 2.75
+
+Free term -> Monday: 11
+
+--------------------------- SCHEDULE ---------------------------
+
+Class 30
+Teacher: Lab-Oops Lab 
+Subject: Oops Lab 
+Groups: SY-B1 
+Type: L 
+Duration: 2 hour(s)
+Classroom: Programming Lab 
+Time: Monday 9 10
+
+Class 31
+Teacher: Lab-Oops Lab 
+Subject: Oops Lab 
+Groups: SY-B2 
+Type: L 
+Duration: 2 hour(s)
+Classroom: Programming Lab 
+Time: Monday 14 15
+
+Class 8
+Teacher: Lab-DS Lab  
+Subject: DS Lab  
+Groups: SY-B1 
+Type: L 
+Duration: 2 hour(s)
+Classroom: Programming Lab 
+Time: Tuesday 9 10
+
+Class 9
+Teacher: Lab-DS Lab  
+Subject: DS Lab  
+Groups: SY-B2 
+Type: L 
+Duration: 2 hour(s)
+Classroom: Programming Lab 
+Time: Tuesday 14 15
+
+Class 0
+Teacher: Teacher-DS 
+Subject: DS 
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Monday 14
+
+Class 1
+Teacher: Teacher-DS 
+Subject: DS 
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Tuesday 14
+
+Class 4
+Teacher: Teacher-DS 
+Subject: DS 
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Monday 9
+
+Class 6
+Teacher: Teacher-DS 
+Subject: DS 
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Wednesday 9
+
+Class 11
+Teacher: Teacher-DLD  
+Subject: DLD  
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Thursday 10
+
+Class 12
+Teacher: Teacher-DLD  
+Subject: DLD  
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Friday 9
+
+Class 13
+Teacher: Teacher-DLD  
+Subject: DLD  
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Monday 10
+
+Class 15
+Teacher: Teacher-DLD  
+Subject: DLD  
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Wednesday 10
+
+Class 17
+Teacher: Teacher-DM 
+Subject: DM 
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Thursday 14
+
+Class 18
+Teacher: Teacher-DM 
+Subject: DM 
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Friday 10
+
+Class 20
+Teacher: Teacher-DM 
+Subject: DM 
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Thursday 10
+
+Class 25
+Teacher: Teacher-OOPS 
+Subject: OOPS 
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Wednesday 12
+
+Class 26
+Teacher: Teacher-OOPS 
+Subject: OOPS 
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Thursday 14
+
+Class 27
+Teacher: Teacher-OOPS 
+Subject: OOPS 
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Friday 10
+
+Class 28
+Teacher: Teacher-OOPS 
+Subject: OOPS 
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Monday 12
+
+Class 29
+Teacher: Teacher-OOPS 
+Subject: OOPS 
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Tuesday 12
+
+Class 34
+Teacher: Teacher-CO  
+Subject: CO  
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Wednesday 15
+
+Class 38
+Teacher: Teacher-EVS 
+Subject: EVS 
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Monday 12
+
+Class 39
+Teacher: Teacher-EVS 
+Subject: EVS 
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Tuesday 12
+
+Class 2
+Teacher: Teacher-DS 
+Subject: DS 
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Monday 15
+
+Class 3
+Teacher: Teacher-DS 
+Subject: DS 
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Tuesday 15
+
+Class 10
+Teacher: Teacher-DLD  
+Subject: DLD  
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Wednesday 9
+
+Class 16
+Teacher: Teacher-DM 
+Subject: DM 
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Wednesday 10
+
+Class 23
+Teacher: Teacher-OOPS 
+Subject: OOPS 
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Wednesday 14
+
+Class 24
+Teacher: Teacher-OOPS 
+Subject: OOPS 
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Thursday 9
+
+Class 32
+Teacher: Teacher-CO  
+Subject: CO  
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Thursday 12
+
+Class 33
+Teacher: Teacher-CO  
+Subject: CO  
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-1 
+Time: Thursday 15
+
+Class 40
+Teacher: Teacher-EVS 
+Subject: EVS 
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-2 
+Time: Wednesday 15
+
+Class 36
+Teacher: Teacher-CO  
+Subject: CO  
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-4 
+Time: Tuesday 9
+
+Class 19
+Teacher: Teacher-DM 
+Subject: DM 
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Wednesday 12
+
+Class 41
+Teacher: Teacher-EVS 
+Subject: EVS 
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-4 
+Time: Wednesday 14
+
+Class 14
+Teacher: Teacher-DLD  
+Subject: DLD  
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Thursday 12
+
+Class 35
+Teacher: Teacher-CO  
+Subject: CO  
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Tuesday 10
+
+Class 5
+Teacher: Teacher-DS 
+Subject: DS 
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-4 
+Time: Thursday 9
+
+Class 21
+Teacher: Teacher-DM 
+Subject: DM 
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Thursday 15
+
+Class 37
+Teacher: Teacher-CO  
+Subject: CO  
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-3 
+Time: Friday 9
+
+Class 22
+Teacher: Teacher-OOPS 
+Subject: OOPS 
+Groups: SY-B1 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-5 
+Time: Friday 12
+
+Class 7
+Teacher: Teacher-DS 
+Subject: DS 
+Groups: SY-B2 
+Type: P 
+Duration: 1 hour(s)
+Classroom: CR-5 
+Time: Friday 15
