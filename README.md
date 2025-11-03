@@ -1,48 +1,68 @@
-<<<<<<< HEAD
-# 🧮 TimetablePro
+# TimetablePro
 
-A smart **automated timetable generator** built using Flask, MySQL, and TailwindCSS.  
-It helps colleges or departments generate conflict-free timetables quickly and easily.
+An AI-assisted Flask web app that automatically generates conflict-free college timetables with subject, faculty, and lab management.
 
 ---
 
 ## 🚀 Features
-- Faculty, subject, and lab configuration
-- Auto conflict checking
-- User login and personalized timetables
-- Save, edit, and delete timetables
-- Simple dashboard interface
+- User auth (login/signup), user-specific projects
+- Configure classrooms, labs, batches, subjects (lectures + labs)
+- Dedicated lab-first scheduling with conflict checks
+- Download timetables (DOCX, XLSX, CSV)
+- Dashboard to view/edit/delete timetables
+- Tailwind CSS-based responsive UI
 
 ---
 
-Screenshot 2025-11-01 100843.png
+## 🖼️ Screenshots
 
-### 🔐 Login Page
-![Login Page](assets/login_page.png)
+> All images are stored in `statics/` and referenced with repository-relative paths.
 
-### 📊 Dashboard
-![Dashboard](assets/dashboard.png)
+### Home
+![Home](statics/Home.png)
 
-### 🧾 Generated Timetable
-![Timetable Output](assets/timetable_output.png)
+### Configure Form
+![Configure](statics/ConfigForm.png)
+
+### Instructions
+![Instructions](statics/Instruction.png)
+
+### Dashboard
+![Dashboard](statics/dashboard.png)
+
+### Timetables
+![Timetables](statics/Timetables.png)
+
+### Login
+![Login](statics/Login.png)
+
+### Signup
+![Signup](statics/signup.png)
+
+### About
+![About](statics/about.png)
 
 ---
 
-## ⚙️ How to Run
+## ⚙️ How to Run (Dev)
 
 ```bash
-# Clone the repository
-git clone https://github.com/<your-username>/TimetablePro.git
-
-# Go into the project folder
-cd TimetablePro
-
-# Install dependencies
+# In project root
+python -m venv .venv
+. .venv/Scripts/activate   # Windows PowerShell
 pip install -r requirements.txt
 
-# Run the Flask app
-python app.py
-=======
-# TimetablePro
-An AI-assisted Flask web app that automatically generates conflict-free college timetables with subject, faculty, and lab management.
->>>>>>> 8b0222a7f8d918dca8fc04007f3e03000fb25a51
+# Run Flask app
+python webapp/app.py
+```
+
+Configure your MySQL connection via environment variables if needed, or update the connection in `webapp/models.py` / `api/db.py`.
+
+---
+
+## Tech Stack
+- Flask, SQLAlchemy, MySQL
+- Tailwind CSS, Jinja2
+- FastAPI (optional API), Uvicorn
+- python-docx, openpyxl
+
